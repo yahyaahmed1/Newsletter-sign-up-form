@@ -24,11 +24,20 @@
         submitBtn.addEventListener("click", () => {
           registerCard.style.cssText = "display: none;";
           successCard.style.cssText = "display: block;";
-          emailText.append(emailField);
+          if (emailText.innerText = " ") {
+            emailText.append(emailField);
+          } else {
+            emailText.innerText = " "
+            emailText.append(emailField);
+          }
         })
         dismissBtn.addEventListener("click", () => {
           successCard.style.cssText = "display: none;";
           registerCard.style.cssText = "display: flex;";
+          if (emailText.innerText != " ") {
+            emailText.innerText = " "
+          }
+
         })
       }
 
